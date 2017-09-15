@@ -1,0 +1,16 @@
+.header{
+    background-color: #008dd3;
+    text-align:center;
+    color:white;
+}
+
+footer {
+    padding: 10px 20px;
+    background: #A5B3AA;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    border-top: 1px rgba(0, 0, 0, 0.1) solid;
+    text-align: right;
+    height: 40px;
+  }
