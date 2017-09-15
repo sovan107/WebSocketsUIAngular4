@@ -1,3 +1,4 @@
+import { StompService } from './service/stomp.service';
 import { ProductService } from './service/product.service';
 import { UserComponent } from './componennts/user/user.component';
 import { AdminComponent } from './componennts/admin/admin.component';
@@ -6,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [ProductService],
+  providers: [ProductService, StompService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

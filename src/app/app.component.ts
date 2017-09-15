@@ -8,7 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Web Socket Demo With Java and Angular 4';
 
-  onStartWSDemo() {
-
-  }
 }

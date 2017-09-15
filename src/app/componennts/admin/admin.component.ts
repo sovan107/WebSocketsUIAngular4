@@ -24,9 +24,13 @@ export class AdminComponent {
     }
 
     saveProductByWS(product: Product) {
-        this.productService.saveProductByWS(product).subscribe(savedProduct => {
-            console.dir(savedProduct);
-        });
+
+        product = new Product();
+        product.name = 'New Product WebSocket';
+        product.code = 'SE34TY';
+        product.price = '12.32';
+
+        this.productService.saveProductByWS(product);
     }
 
 
