@@ -1,2 +1,5 @@
-<!--component html goes here -->
-<h3> User </h3>
+<ul class="list-group" *ngFor="let product of products">
+  <li class="list-group-item" (click)="onSelect(product)" [ngClass]="{'selected': product.id === selectedProduct.id}">
+    {{product.name}}
+  </li>
+</ul>

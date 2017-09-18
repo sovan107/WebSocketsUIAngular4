@@ -1,6 +1,7 @@
 export class Product {
+    id;
     name;
     code;
     price;
-    createdDate;
+    creationDate;
 }

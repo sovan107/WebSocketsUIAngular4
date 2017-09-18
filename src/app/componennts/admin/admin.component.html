@@ -1,5 +1,23 @@
-<!--component html goes here -->
-<h3> Admin </h3>
-<a (click)= "listProduct()">List </a>
-<a (click)= "saveProduct()">Save </a>
-<a (click)= "saveProductByWS()">Save WebSocket </a>
+<div class="col-md-3 mb-2" style="margin-top:10px">
+  <button (click)="saveProduct()" class="btn btn-primary rounded-0 pull-left">Save</button>
+  <button (click)="saveProductByWS()" class="btn btn-primary rounded-0 pull-left">Save WebSocket</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <ul class="list-group" *ngFor="let product of products">
+        <li class="list-group-item justify-content-between"  [ngClass]="{'selected': product.id === selectedProduct.id}" (click)="onSelectedProduct(product)">{{product.name}}
+          <div class="d-flex flex-row-reverse">
+                <span class="badge badge-default badge-pill bg-danger ml-1" (click)="deleteProduct(product)">X-With Http</span>
+                <span class="badge badge-default badge-pill bg-warning" (click)="deleteProductByWS(product)">X-With WS</span>
+          </div>
+          
+        </li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <product-detail [selectedProduct]="selectedProduct"></product-detail>
+    </div>
+  </div>
+</div>
